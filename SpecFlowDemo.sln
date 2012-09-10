@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowDemo.Tests", "SpecFlowDemo.Tests\SpecFlowDemo.Tests.csproj", "{6D05B08E-364E-4F72-A284-260B941028CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowDemo.Specs", "SpecFlowDemo.Specs\SpecFlowDemo.Specs.csproj", "{97710C94-F2E1-4720-BBCF-97EC5DA2BC18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowDemo", "SpecFlowDemo\SpecFlowDemo.csproj", "{7F0E4206-FDE1-4591-9831-901C43A58F70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D05B08E-364E-4F72-A284-260B941028CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D05B08E-364E-4F72-A284-260B941028CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D05B08E-364E-4F72-A284-260B941028CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D05B08E-364E-4F72-A284-260B941028CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F0E4206-FDE1-4591-9831-901C43A58F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F0E4206-FDE1-4591-9831-901C43A58F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F0E4206-FDE1-4591-9831-901C43A58F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F0E4206-FDE1-4591-9831-901C43A58F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97710C94-F2E1-4720-BBCF-97EC5DA2BC18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97710C94-F2E1-4720-BBCF-97EC5DA2BC18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97710C94-F2E1-4720-BBCF-97EC5DA2BC18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97710C94-F2E1-4720-BBCF-97EC5DA2BC18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
