@@ -90,19 +90,30 @@ namespace SpecFlowDemo.Specs
             _result = _controller.Register(_registerModel);
         }
 
-
-        [Then(@"He should be shown the error message ""(.*)""")]
-        public void ThenHeShouldBeShownTheErrorMessage(string errorMessage)
+        [Then(@"He should be shown the error message ""(.*)"" ""(.*)""")]
+        public void ThenHeShouldBeShownTheErrorMessage(string errorMessage, string field)
         {
             Assert.IsNotNull(_result);
             Assert.IsInstanceOf<ViewResult>(_result);
 
-            Assert.IsTrue(_controller.ViewData.ModelState.ContainsKey("username"));
+            Assert.IsTrue(_controller.ViewData.ModelState.ContainsKey(field));
 
             Assert.AreEqual(errorMessage,
-                _controller.ViewData.ModelState["username"].Errors[0].ErrorMessage);
+                _controller.ViewData.ModelState[field].Errors[0].ErrorMessage);
         }
 
-
+        [Given(@"The user has not entered the password but has entered a ConfirmPassword")]
+        public void GivenTheUserHasNotEnteredThePasswordButHasEnteredAConfirmPassword()
+        {
+            _registerModel = new RegisterModel
+            {
+                UserName = "testUser",
+                Email = "test@dummy.com",
+                Password = string.Empty,
+                ConfirmPassword = "test123"
+            };
+            _controller = new AccountController(_formsService.Object,
+                             _memberService.Object); 
+        }
     }
 }

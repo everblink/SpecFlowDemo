@@ -111,7 +111,24 @@ this.ScenarioSetup(scenarioInfo);
 #line 18
     testRunner.When("He clicks on Register", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
-    testRunner.Then("He should be shown the error message \"Username is required\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("He should be shown the error message \"Username is required\" \"Username\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Register should return error if password is missing")]
+        public virtual void RegisterShouldReturnErrorIfPasswordIsMissing()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register should return error if password is missing", ((string[])(null)));
+#line 21
+this.ScenarioSetup(scenarioInfo);
+#line 22
+    testRunner.Given("The user has not entered the password but has entered a ConfirmPassword", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
+    testRunner.When("He clicks on Register", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+    testRunner.Then("He should be shown the error message \"Password is required\" \"ConfirmPassword\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
