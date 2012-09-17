@@ -12,3 +12,8 @@ Scenario: On Successful registration the user should be redirected to Home Page
     Given The user has entered all the information
     When He Clicks on Register button
     Then He should be redirected to the home page
+
+Scenario: Register should return error if username is missing
+    Given The user has not entered the username
+    When He clicks on Register
+    Then He should be shown the error message "Username is required"

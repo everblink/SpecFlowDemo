@@ -98,6 +98,23 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Register should return error if username is missing")]
+        public virtual void RegisterShouldReturnErrorIfUsernameIsMissing()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Register should return error if username is missing", ((string[])(null)));
+#line 16
+this.ScenarioSetup(scenarioInfo);
+#line 17
+    testRunner.Given("The user has not entered the username", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 18
+    testRunner.When("He clicks on Register", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 19
+    testRunner.Then("He should be shown the error message \"Username is required\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

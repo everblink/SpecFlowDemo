@@ -70,5 +70,39 @@ namespace SpecFlowDemo.Specs
             if (tresults != null) Assert.AreEqual(expected, tresults.RouteValues["action"]);
         }
 
+        [Given(@"The user has not entered the username")]
+        public void GivenTheUserHasNotEnteredTheUsername()
+        {
+            _registerModel = new RegisterModel
+            {
+                UserName = string.Empty,
+                Email = "test@dummy.com",
+                Password = "test123",
+                ConfirmPassword = "test123"
+            };
+            _controller = new AccountController(_formsService.Object,
+                             _memberService.Object);   
+        }
+
+        [When(@"He clicks on Register")]
+        public void WhenHeClicksOnRegister()
+        {
+            _result = _controller.Register(_registerModel);
+        }
+
+
+        [Then(@"He should be shown the error message ""(.*)""")]
+        public void ThenHeShouldBeShownTheErrorMessage(string errorMessage)
+        {
+            Assert.IsNotNull(_result);
+            Assert.IsInstanceOf<ViewResult>(_result);
+
+            Assert.IsTrue(_controller.ViewData.ModelState.ContainsKey("username"));
+
+            Assert.AreEqual(errorMessage,
+                _controller.ViewData.ModelState["username"].Errors[0].ErrorMessage);
+        }
+
+
     }
 }
