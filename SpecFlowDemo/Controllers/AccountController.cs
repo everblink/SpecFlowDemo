@@ -12,8 +12,15 @@ namespace SpecFlowDemo.Controllers
     public class AccountController : Controller
     {
 
+        public IFormsAuthenticationService FormsService { get; set; }
+        public IMembershipService MembershipService { get; set; }
         //
         // GET: /Account/LogOn
+        public AccountController(IFormsAuthenticationService formsService, IMembershipService memberService)
+        {
+            FormsService = formsService;
+            MembershipService = memberService;
+        }
 
         public ActionResult LogOn()
         {
@@ -66,6 +73,8 @@ namespace SpecFlowDemo.Controllers
 
         public ActionResult Register()
         {
+            ViewData["Title"] = "Register";
+            ViewData["PasswordLength"] = MembershipService.MinPasswordLength;
             return View();
         }
 

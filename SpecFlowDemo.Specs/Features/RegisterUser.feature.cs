@@ -81,6 +81,23 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("On Successful registration the user should be redirected to Home Page")]
+        public virtual void OnSuccessfulRegistrationTheUserShouldBeRedirectedToHomePage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("On Successful registration the user should be redirected to Home Page", ((string[])(null)));
+#line 11
+this.ScenarioSetup(scenarioInfo);
+#line 12
+    testRunner.Given("The user has entered all the information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 13
+    testRunner.When("He Clicks on Register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 14
+    testRunner.Then("He should be redirected to the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
